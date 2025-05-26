@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PontoCar</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div id="conteudoH">
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo" id="logo">
+            </a>
+            <nav id="menu">
+                <a href="#home">HOME</a>
+                <a href="#servicos">SERVIÇOS</a>
+                <a href="#contatos">CONTATOS</a>
+                <a href="#local">LOCALIZAÇÃO</a>
+                <a href="#agenda" id="btAgenda">Agendar Serviço</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home"></section>
+    <section id="servicos"></section>
+    <section id="contatos"></section>
+    <section id="local"></section>
+    <section id="agenda"></section>
+
+    <script>
+        function carregarSecao(id, arquivo) {
+            fetch(arquivo)
+                .then(res => res.text())
+                .then(html => document.getElementById(id).innerHTML = html)
+                .catch(err => console.error('Erro ao carregar ' + arquivo, err));
+        }
+
+        carregarSecao("home", "home.html");
+        carregarSecao("servicos", "servicos.html");
+        carregarSecao("contatos", "contatos.html");
+        carregarSecao("local", "local.html");
+        carregarSecao("agenda", "agenda.html");
+    </script>
+</body>
+
+</html>

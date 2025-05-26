@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    z-index: 10000;
+    height: 90px;
+    width: 100%;
+    justify-content: center;
+    background-color: #f3f8ff;
+    box-shadow: inset 0px 0px 15px #cadefa;
+
+}
+
+#conteudoH {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-left: 50px;
+    width: 100%;
+}
+
+#logo {
+    height: 65px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    font-size: 17px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#menu a:hover {
+    color: #00468b;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-top: 90px;
+}
+
+#btAgenda {
+    padding: 11px 14px;
+    text-align: center;
+    background-color: #ffea2f;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+#btAgenda:hover {
+    background-color: #f3ee00;
+}
+
+#home {
+    background-color: rgb(255, 255, 255);
+}
+
+#conteudoHome {
+    display: flex;
+}
+
+#titleHome {
+    color: #02033B;
+    font-size: 50px;
+    flex-wrap: wrap;
+}
