@@ -211,6 +211,19 @@ header {
     }
 }
 
+.fade-text {
+  transition: opacity 1s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+}
+.fade-out {
+  opacity: 0;
+}
+.fade-in {
+  opacity: 1;
+}
+
+
 /* SERVIÇOS */
 
 .servicos {
@@ -228,67 +241,73 @@ header {
 }
 
 .card {
-  position: relative;
-  width: 300px;
-  height: 200px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 .card::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
 }
 
 .card.troca-oleo::before {
-  background-image: url(/Pontocar/PONTOCAR/img/troca-de-oleo.jpg);
+    background-image: url(../img/troca-de-oleo.jpg);
 }
 
 .card.bateria::before {
-  background-image: url(/Pontocar/PONTOCAR/img/bateria.jpg);
+    background-image: url(../img/bateria.jpg);
 }
 
 .card.freio::before {
-  background-image: url(/Pontocar/PONTOCAR/img/freio.jpg);
+    background-image: url(../img/freio.jpg);
 }
 
 .card::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); 
-  z-index: 2;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
 .conteudo-card {
-  position: relative;
-  z-index: 3; 
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .conteudo-card p {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0 20px;
-  text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 20px;
+    text-align: center;
 }
 
 .cards-container {
-  display: flex;
-  justify-content: center; 
-  gap: 20px;               
-  flex-wrap: wrap;         
-  margin-bottom: 40px;     
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
 
@@ -302,4 +321,102 @@ header {
 
 .marcas img {
     height: 40px;
+}
+
+/* Contatos */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.contatos {
+    background-color: #02033b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    flex-wrap: wrap;
+    gap: 150px;
+    color: white;
+}
+
+.banner-contato {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.banner-contato img {
+    width: 260px;
+    height: auto;
+}
+
+.tipos-contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.conteudo-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contato-item,
+.contato-item-gmail {
+    background-color: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.contato-item img,
+.contato-item-gmail img {
+    width: 26px;
+    height: 26px;
+    border-radius: 5px;
+}
+
+.horarios {
+    max-width: 250px;
+    color: white;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.horarios h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.horarios p {
+    margin: 4px 0;
+    font-size: 1.15rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contatos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-contato,
+    .tipos-contatos,
+    .horarios {
+        width: 100%;
+        text-align: center;
+    }
+
+    .horarios {
+        max-width: 100%;
+    }
 }
