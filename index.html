@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PontoCar</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
     <header>
         <div id="conteudoH">
@@ -15,58 +17,60 @@
             <nav id="menu">
                 <a href="#home" class="mn">HOME</a>
                 <a href="#servicos" class="mn">SERVIÇOS</a>
-                <a href="#contatos" class="mn">CONTATOS</a>
                 <a href="#local" class="mn">LOCALIZAÇÃO</a>
-                <a href="#agenda" id="btAgenda"z>Agendar Serviço</a>
+                <a href="#contatos" class="mn">CONTATOS</a>
+                <a href="#agenda" id="btAgenda" z>Agendar Serviço</a>
             </nav>
         </div>
     </header>
 
     <section id="home"></section>
+    <div id="divisoriaService"></div>
     <section id="servicos"></section>
+    <section id="local"></section>
     <section id="contatos"></section>
 
     <script>
-    function carregarSecao(id, arquivo, callback) {
-        fetch(arquivo)
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById(id).innerHTML = html;
-                if (callback) callback();
-            })
-            .catch(err => console.error('Erro ao carregar ' + arquivo, err));
-    }
+        function carregarSecao(id, arquivo, callback) {
+            fetch(arquivo)
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById(id).innerHTML = html;
+                    if (callback) callback();
+                })
+                .catch(err => console.error('Erro ao carregar ' + arquivo, err));
+        }
 
-    carregarSecao("home", "home.html", iniciarTrocaTexto);
-    carregarSecao("servicos", "servicos.html");
-    carregarSecao("contatos", "contatos.html");
-    carregarSecao("local", "local.html");
-    carregarSecao("agenda", "agenda.html");
+        carregarSecao("home", "home.html", iniciarTrocaTexto);
+        carregarSecao("servicos", "servicos.html");
+        carregarSecao("contatos", "contatos.html");
+        carregarSecao("local", "local.html");
+        carregarSecao("agenda", "agenda.html");
 
-    function iniciarTrocaTexto() {
-        const texto = document.getElementById("troca-texto");
-        if (!texto) return;
+        function iniciarTrocaTexto() {
+            const texto = document.getElementById("troca-texto");
+            if (!texto) return;
 
-        const frases = [
-            "Injeção eletrônica",
-            "Mecânica em geral"
-        ];
+            const frases = [
+                "Injeção eletrônica",
+                "Mecânica em geral"
+            ];
 
-        let index = 0;
+            let index = 0;
 
-        setInterval(() => {
-            texto.classList.remove("fade-in");
-            texto.classList.add("fade-out");
+            setInterval(() => {
+                texto.classList.remove("fade-in");
+                texto.classList.add("fade-out");
 
-            setTimeout(() => {
-                index = (index + 1) % frases.length;
-                texto.textContent = frases[index];
-                texto.classList.remove("fade-out");
-                texto.classList.add("fade-in");
-            }, 500);
-        }, 3000);
-    }
-</script>
+                setTimeout(() => {
+                    index = (index + 1) % frases.length;
+                    texto.textContent = frases[index];
+                    texto.classList.remove("fade-out");
+                    texto.classList.add("fade-in");
+                }, 500);
+            }, 3000);
+        }
+    </script>
 
     <script src="js/script.js"></script>
 </body>

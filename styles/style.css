@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -13,17 +14,17 @@ body {
     min-height: 100vh;
 }
 
+/* HEADER */
 header {
-    position: fixed;
     width: 100%;
     height: 90px;
-    background-color: #f3f8ff;
+    background: #f3f8ff;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 20px;
     z-index: 10000;
-    box-shadow: inset 0 0 15px #cadefa;
+    box-shadow: inset 0 0 25px #c8dfff;
 }
 
 #conteudoH {
@@ -32,10 +33,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* Ajuste */
+    flex-wrap: wrap; /* para telas pequenas os itens vão quebrar linha */
+    gap: 15px;
 }
 
 #logo {
     height: 65px;
+    /* Ajuste */
+    flex-shrink: 0;
 }
 
 #menu {
@@ -43,12 +49,17 @@ header {
     gap: 18px;
     font-size: 17px;
     align-items: center;
+    /* Ajuste */
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
 }
 
 .mn {
     font-weight: bold;
     text-decoration: none;
     color: black;
+    transition: color 0.3s;
 }
 
 .mn:hover {
@@ -57,51 +68,56 @@ header {
 
 #btAgenda {
     padding: 11px 14px;
-    background-color: #ffea2f;
+    background: #ffea2f;
     border-radius: 30px;
     font-weight: bold;
     font-size: 16px;
     color: black;
     text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    /* Ajuste */
+    white-space: nowrap;
 }
 
 #btAgenda:hover {
-    background-color: #c5b400;
+    background: #c5b400;
     color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-#home {
-    padding-top: 45px;
-}
+
+/* HOME - Banner */
 
 .banner {
     display: flex;
-    flex-wrap: wrap;
-    padding: 40px 20px;
-    background-color: #f3f8ff;
-    border-bottom: 1px solid black;
     justify-content: center;
     align-items: center;
     gap: 30px;
     min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.546)), url('../img/mecanico.webp') center/cover no-repeat;
+    /* Ajuste */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 .banner-texto {
     flex: 1 1 300px;
     max-width: 500px;
+    text-align: center;
 }
 
 .banner-texto h1 {
-    font-size: 36px;
+    font-size: 55px;
     font-weight: bold;
-    color: #0a0a32;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
 .banner-texto p {
     font-size: 16px;
-    color: #444;
+    color: white;
     line-height: 1.5;
     margin-bottom: 25px;
 }
@@ -110,6 +126,7 @@ header {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .btn {
@@ -119,125 +136,53 @@ header {
     text-decoration: none;
     cursor: pointer;
     text-align: center;
+    transition: background-color 0.3s;
 }
 
 .btn-amarelo {
-    background-color: #e0cf29;
+    background: #e0cf29;
     color: black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .btn-amarelo:hover {
-    background-color: #cdbd1a;
+    background: #cdbd1a;
 }
 
 .btn-cinza {
-    background-color: #bbb;
-    color: white;
+    background: #bbb;
+    color: rgb(39, 39, 39);
 }
 
 .btn-cinza:hover {
-    background-color: #999;
+    background: #999;
 }
 
-.divImage {
-    flex: 1 1 300px;
-    max-width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.divImage img {
-    width: 900px;
-    height: 420px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    background-color: silver;
-}
-
-/* ===== RESPONSIVIDADE ===== */
-
-@media (max-width: 900px) {
-
-    .banner-texto,
-    .divImage {
-        max-width: 100%;
-        flex: 1 1 100%;
-        padding: 0 10px;
-    }
-
-    .banner-texto h1 {
-        font-size: 28px;
-    }
-
-    #menu {
-        font-size: 15px;
-        gap: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        height: auto;
-        padding: 15px 20px;
-    }
-
-    #conteudoH {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    #menu {
-        flex-wrap: wrap;
-        gap: 10px;
-        width: 100%;
-    }
-
-    .banner-texto h1 {
-        font-size: 24px;
-    }
-
-    #btAgenda {
-        font-size: 14px;
-        padding: 10px 14px;
-    }
-
-    .btn {
-        font-size: 14px;
-        padding: 10px 16px;
-    }
-}
-
+/* Fade */
 .fade-text {
-  transition: opacity 1s ease-in-out;
-  display: inline-block;
-  opacity: 1;
+    transition: opacity 1s ease-in-out;
+    display: inline-block;
+    opacity: 1;
 }
+
 .fade-out {
-  opacity: 0;
-}
-.fade-in {
-  opacity: 1;
+    opacity: 0;
 }
 
 
 /* SERVIÇOS */
-
-.servicos {
+#servicos {
     background: linear-gradient(to bottom, #fdf16e, #f7d53a);
-    padding: 70px 70px;
-    margin: 0;
+    padding: 70px 20px; /* Ajuste para responsividade */
     text-align: center;
+    min-height: 100vh;
 }
 
-.servicos h2 {
+#servicos h2 {
     font-size: 60px;
     font-weight: bold;
     margin-bottom: 60px;
-    text-align: left;
+    text-align: center; /* Ajuste: centralizar o título para melhor visual */
 }
 
 .card {
@@ -248,15 +193,18 @@ header {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.card:hover {
+    transform: scale(1.1);
 }
 
 .card::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -277,10 +225,7 @@ header {
 .card::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
@@ -311,9 +256,10 @@ header {
 }
 
 
+/* Marcas */
 .marcas {
     display: flex;
-    justify-content: left;
+    justify-content: center; /* Ajuste para centralizar */
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
@@ -323,51 +269,47 @@ header {
     height: 40px;
 }
 
-/* Contatos */
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
+/* CONTATOS */
 .contatos {
-    background-color: #02033b;
+    background: #02033b;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 40px 20px; /* Ajuste */
     flex-wrap: wrap;
-    gap: 150px;
+    gap: 50px; /* Ajuste para ficar mais harmônico */
     color: white;
+    text-align: center; /* Para centralizar o texto em telas menores */
 }
 
 .banner-contato {
-    background-color: white;
+    background: white;
     border-radius: 20px;
     padding: 20px;
+    flex: 1 1 260px;
+    max-width: 300px;
+    box-sizing: border-box;
 }
 
 .banner-contato img {
-    width: 260px;
+    width: 100%;
     height: auto;
 }
 
-.tipos-contatos {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
+.tipos-contatos,
 .conteudo-contato {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex: 1 1 260px;
+    max-width: 300px;
+    box-sizing: border-box;
 }
 
 .contato-item,
 .contato-item-gmail {
-    background-color: white;
+    background: white;
     padding: 12px 18px;
     border-radius: 10px;
     display: flex;
@@ -390,6 +332,7 @@ body {
     color: white;
     font-size: 1.15rem;
     line-height: 1.6;
+    flex: 1 1 250px;
 }
 
 .horarios h3 {
@@ -402,11 +345,109 @@ body {
     font-size: 1.15rem;
 }
 
-/* Responsivo */
+/* LOCALIZAÇÃO */
+
+.conteudoLocal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.blocoLocal {
+    flex: 1 1 300px;
+    max-width: 500px;
+    margin-left: 0; /* Ajuste para que fique alinhado */
+    box-sizing: border-box;
+}
+
+.blocoLocal h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #0d1c3d;
+    margin-bottom: 35px;
+}
+
+.blocoLocal .btn {
+    background-color: #ffea2f;
+    color: #000;
+    font-weight: bold;
+    padding: 16px 24px;
+    border-radius: 30px;
+    display: inline-block;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.blocoLocal .btn:hover {
+    background-color: #c5b400;
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mapaLocal {
+    flex: 1 1 300px;
+    max-width: 600px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Até 900px */
+@media (max-width: 900px) {
+    #btAgendar {
+        max-width: 100%;
+        padding: 12px 20px;
+        display: block;
+        margin: 0 auto;
+        white-space: nowrap;
+    }
+
+    .banner-texto,
+    .divImage {
+        max-width: 100%;
+        flex: 1 1 100%;
+        padding: 0 10px;
+    }
+
+    .banner-texto h1 {
+        font-size: 28px;
+    }
+
+    #menu {
+        font-size: 15px;
+        gap: 12px;
+    }
+
+    .divImage img {
+        width: 100%;
+        height: auto;
+    }
+
+    #servicos h2 {
+        font-size: 42px;
+    }
+}
+
+/* Até 768px */
 @media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .contatos {
         flex-direction: column;
         align-items: center;
+        gap: 50px;
     }
 
     .banner-contato,
@@ -418,5 +459,145 @@ body {
 
     .horarios {
         max-width: 100%;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        height: 180px;
+    }
+
+    .conteudo-card p {
+        font-size: 20px;
+    }
+
+    .marcas {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #servicos {
+        padding: 50px 30px;
+    }
+}
+
+/* Até 480px */
+@media (max-width: 480px) {
+    header {
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    #btAgendar {
+        max-width: 100%;
+        padding: 12px 20px;
+        display: block;
+        margin: 0 auto;
+        white-space: nowrap;
+    }
+
+    #conteudoH {
+        flex-direction: column;
+        align-items: center; /* Ajuste: centraliza itens */
+        gap: 15px;
+    }
+
+    #menu {
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+        justify-content: center; /* Ajuste para centralizar */
+    }
+
+    .banner-texto h1 {
+        font-size: 24px;
+    }
+
+    .banner-texto p {
+        font-size: 14px;
+    }
+
+    #btAgenda {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    .divImage img {
+        width: 100%;
+        height: auto;
+    }
+
+    #servicos h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .contato-item,
+    .contato-item-gmail {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+
+    .horarios h3,
+    .horarios p {
+        font-size: 1rem;
+    }
+}
+
+/* Até 360px */
+@media (max-width: 360px) {
+    #btAgendar {
+        max-width: 100%;
+        padding: 12px 20px;
+        display: block;
+        margin: 0 auto;
+        white-space: nowrap;
+    }
+
+    #logo {
+        height: 50px;
+    }
+
+    #menu {
+        font-size: 13px;
+        gap: 8px;
+    }
+
+    .banner-texto h1 {
+        font-size: 20px;
+    }
+
+    .banner-texto p {
+        font-size: 12px;
+    }
+
+    #btAgenda {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .contato-item,
+    .contato-item-gmail {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+
+    .horarios h3,
+    .horarios p {
+        font-size: 0.9rem;
     }
 }
