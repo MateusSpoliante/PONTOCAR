@@ -163,23 +163,26 @@ header {
 #sobreNos {
     padding: 20px;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: rgb(44, 40, 1);
     font-size: 20px;
+    font-weight: bold;
     border-radius: 20px;
-    background-color: #fdffc4;
+    background-color: #fdffc8;
 }
 
 .texto-visivel {
-    display: block;
+    opacity: 1;
     visibility: visible;
-    padding-left: 15px;
-    transition: 1.8s ease;
-    opacity: 75%;
+    max-height: 1000px;
+    overflow: hidden;
+    transition: transform 1.8s ease;
 }
 
 .texto-escondido {
+    position: absolute;
     opacity: 0;
-    transition: 1.8s ease;
+    transform: scale(95%);
+    cursor: default;
 }
 
 
