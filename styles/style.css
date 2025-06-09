@@ -172,7 +172,7 @@ header {
 
 /* SERVIÇOS */
 #servicos {
-    background: linear-gradient(to bottom, #fdf16e, #f7d53a);
+    background: linear-gradient(to bottom, #f2e87b, #e0cf29);
     padding: 70px 20px; /* Ajuste para responsividade */
     text-align: center;
     min-height: 100vh;
@@ -502,7 +502,7 @@ header {
 
     #conteudoH {
         flex-direction: column;
-        align-items: center; /* Ajuste: centraliza itens */
+        align-items: center; /* centraliza os itens */
         gap: 15px;
     }
 
@@ -510,7 +510,7 @@ header {
         flex-wrap: wrap;
         gap: 10px;
         width: 100%;
-        justify-content: center; /* Ajuste para centralizar */
+        justify-content: center; /* centralizar */
     }
 
     .banner-texto h1 {
