@@ -70,6 +70,14 @@
                 }, 500);
             }, 3000);
         }
+
+        function mostrarTexto() {
+            const div = document.getElementById("sobreNos");
+            if (!div) return;
+            div.classList.toggle("texto-visivel");
+            div.classList.toggle("texto-escondido");
+        }
+
     </script>
 
     <script src="js/script.js"></script>

@@ -33,8 +33,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Ajuste */
-    flex-wrap: wrap; /* para telas pequenas os itens vão quebrar linha */
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -152,11 +151,38 @@ header {
 .btn-cinza {
     background: #bbb;
     color: rgb(39, 39, 39);
+    border: none;
+    font-size: 15px;
 }
 
 .btn-cinza:hover {
     background: #999;
+    border: none;
 }
+
+#sobreNos {
+    padding: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #fdffc4;
+}
+
+.texto-visivel {
+    display: block;
+    visibility: visible;
+    padding-left: 15px;
+    transition: 1.8s ease;
+    opacity: 75%;
+}
+
+.texto-escondido {
+    opacity: 0;
+    transition: 1.8s ease;
+}
+
+
 
 /* Fade */
 .fade-text {
@@ -173,7 +199,8 @@ header {
 /* SERVIÇOS */
 #servicos {
     background: linear-gradient(to bottom, rgb(249, 240, 148), #cfb704);
-    padding: 70px 20px; /* Ajuste para responsividade */
+    padding: 70px 20px;
+    /* Ajuste para responsividade */
     text-align: center;
     min-height: 100vh;
 }
@@ -182,7 +209,8 @@ header {
     font-size: 60px;
     font-weight: bold;
     margin-bottom: 60px;
-    text-align: center; /* Ajuste: centralizar o título para melhor visual */
+    text-align: center;
+    /* Ajuste: centralizar o título para melhor visual */
 }
 
 .card {
@@ -259,7 +287,8 @@ header {
 /* Marcas */
 .marcas {
     display: flex;
-    justify-content: center; /* Ajuste para centralizar */
+    justify-content: center;
+    /* Ajuste para centralizar */
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
@@ -276,11 +305,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px; /* Ajuste */
+    padding: 40px 20px;
+    /* Ajuste */
     flex-wrap: wrap;
-    gap: 50px; /* Ajuste para ficar mais harmônico */
+    gap: 50px;
+    /* Ajuste para ficar mais harmônico */
     color: white;
-    text-align: center; /* Para centralizar o texto em telas menores */
+    text-align: center;
+    /* Para centralizar o texto em telas menores */
 }
 
 .banner-contato {
@@ -290,6 +322,7 @@ header {
     flex: 1 1 260px;
     max-width: 300px;
     box-sizing: border-box;
+
 }
 
 .banner-contato img {
@@ -305,6 +338,7 @@ header {
     flex: 1 1 260px;
     max-width: 300px;
     box-sizing: border-box;
+    justify-content: center;
 }
 
 .contato-item,
@@ -361,7 +395,8 @@ header {
 .blocoLocal {
     flex: 1 1 300px;
     max-width: 500px;
-    margin-left: 0; /* Ajuste para que fique alinhado */
+    margin-left: 0;
+    /* Ajuste para que fique alinhado */
     box-sizing: border-box;
 }
 
@@ -502,7 +537,8 @@ header {
 
     #conteudoH {
         flex-direction: column;
-        align-items: center; /* centraliza os itens */
+        align-items: center;
+        /* centraliza os itens */
         gap: 15px;
     }
 
@@ -510,7 +546,8 @@ header {
         flex-wrap: wrap;
         gap: 10px;
         width: 100%;
-        justify-content: center; /* centralizar */
+        justify-content: center;
+        /* centralizar */
     }
 
     .banner-texto h1 {
