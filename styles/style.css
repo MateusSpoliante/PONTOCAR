@@ -172,7 +172,7 @@ header {
 
 /* SERVIÇOS */
 #servicos {
-    background: linear-gradient(to bottom, #f2e87b, #e0cf29);
+    background: linear-gradient(to bottom, rgb(249, 240, 148), #cfb704);
     padding: 70px 20px; /* Ajuste para responsividade */
     text-align: center;
     min-height: 100vh;
