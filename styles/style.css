@@ -43,6 +43,8 @@ header {
        1px -1px 0 rgb(255, 255, 190),
       -1px  1px 0 rgb(255, 255, 190),
        1px  1px 0 rgb(255, 255, 190);
+       
+
 
 
 }
@@ -86,12 +88,15 @@ header {
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     /* Ajuste */
     white-space: nowrap;
+
+    border: 2px solid #0d1c3d;
 }
 
 #btAgenda:hover {
-    background: #c5b400;
-    color: white;
+    background: #0d1c3d;
+    color: #ffe838;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
 }
 
 
