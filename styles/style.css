@@ -35,7 +35,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
-    background: linear-gradient(to right, #f3f8ff, #0d1c3d, #ffe838 50%, #f3f8ff);
+    background: linear-gradient(to right, #f3f8ff,  #ffec5f 50%, #0d1c3d, #f3f8ff);
 
     color: black; /* cor do texto */
     text-shadow: 
