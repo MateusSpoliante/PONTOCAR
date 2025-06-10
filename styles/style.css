@@ -17,13 +17,16 @@ body {
 /* HEADER */
 header {
     width: 100%;
-    height: 90px;
-    background: #f3f8ff;
+    height: 80px;
+    background: linear-gradient(120deg, #f5f546 0%, #ffffbd 30%, #aed0ff 70%, #5c83df 100%);
     display: flex;
     justify-content: center;
-    align-items: justify;
-    padding: 0 20px;
+    align-items: center;
+    padding: 0 20px;    
     z-index: 10000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
 }
 
 #conteudoH {
@@ -34,21 +37,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
-    background: linear-gradient(to right, #f3f8ff,  #ffec5f 50%, #0d1c3d, #f3f8ff);
-
-    color: black; /* cor do texto */
-    text-shadow: 
-  -0.5px -0.5px 0 rgb(255, 255, 190),
-   0.5px -0.5px 0 rgb(255, 255, 190),
-  -0.5px  0.5px 0 rgb(255, 255, 190),
-   0.5px  0.5px 0 rgb(255, 255, 190);
-
-
-
-       
-
-
-
+    color: #000 ;
 }
 
 #logo {
@@ -71,12 +60,14 @@ header {
 .mn {
     font-weight: bold;
     text-decoration: none;
-    color: black;
-    transition: color 0.3s;
+    color: #000000;
+    text-shadow: 1px 1px 2px #ffffc0;
+    transition: 0.3s ease;
 }
 
 .mn:hover {
-    color: #00468b;
+    color: #fff176;
+    text-shadow: 1px 1px 4px #000000;
 }
 
 #btAgenda {
@@ -176,34 +167,6 @@ header {
     background: #999;
     border: none;
 }
-
-#sobreNos {
-    padding: 20px;
-    text-align: center;
-    color: rgb(44, 40, 1);
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 20px;
-    background-color: #fdffc8;
-}
-
-.texto-visivel {
-    opacity: 1;
-    visibility: visible;
-    max-height: 1000px;
-    overflow: hidden;
-    transition: transform 1.8s ease;
-}
-
-.texto-escondido {
-    position: absolute;
-    opacity: 0;
-    transform: scale(95%);
-    cursor: default;
-    text-align: justify;
-}
-
-
 
 /* Fade */
 .fade-text {
