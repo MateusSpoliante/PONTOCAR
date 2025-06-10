@@ -4,8 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!texto) return; 
 
   const frases = [
+    "Mecânica em geral",
     "Injeção Eletrônica",
-    "Mecânica em geral"
+    "Troca de Óleo",
+    "Bateria",
+    "Freios",
+    "Alinhamento",
+    "Balanceamento"
   ];
 
   let index = 0;
