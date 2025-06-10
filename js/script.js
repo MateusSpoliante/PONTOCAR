@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "Mecânica em geral",
     "Injeção Eletrônica",
     "Troca de Óleo",
-    "Bateria",
+    "Baterias",
     "Freios",
     "Alinhamento",
     "Balanceamento"
