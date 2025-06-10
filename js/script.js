@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!texto) return; 
 
   const frases = [
-    "Mecânica em geral",
+    "Mecânica Geral",
     "Injeção Eletrônica",
     "Troca de Óleo",
     "Baterias",
