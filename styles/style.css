@@ -22,7 +22,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;    
+    padding: 0 20px;
     z-index: 10000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -37,7 +37,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
-    color: #000 ;
+    color: #000;
 }
 
 #logo {
@@ -234,6 +234,19 @@ header {
     background-image: url(../img/freio.jpg);
 }
 
+.card.injecao_eletronica::before {
+    background-image: url(../img/injecao_eletronica.jpg);
+}
+
+
+.card.alinhamento::before {
+    background-image: url(../img/alinhamento.webp);
+}
+
+.card.balanceamento::before {
+    background-image: url(../img/balanceamento.webp);
+}
+
 .card::after {
     content: "";
     position: absolute;
@@ -260,13 +273,12 @@ header {
 }
 
 .cards-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
+    justify-content: center;
+    margin-bottom: 30px;
 }
-
 
 /* Marcas */
 .marcas {
