@@ -379,7 +379,7 @@ header {
     height: 40px;
 }
 
-
+/* CONTATOS */
 .contatos {
     background-color: #02033b;
     display: flex;
@@ -395,8 +395,6 @@ header {
     background-color: white;
     border-radius: 20px;
     padding: 20px;
-    justify-content: center;
-    align-items: center;
 }
 
 .banner-contato img {
@@ -408,16 +406,12 @@ header {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center;
-    width: 100%;
 }
 
 .conteudo-contato {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center;
-    width: 100%;
 }
 
 .contato-item,
@@ -431,9 +425,6 @@ header {
     color: black;
     font-weight: bold;
     font-size: 1rem;
-    width: 100%;
-    max-width: 320px;
-    justify-content: flex-start;
 }
 
 .contato-item img,
@@ -448,10 +439,6 @@ header {
     color: white;
     font-size: 1.15rem;
     line-height: 1.6;
-    align-self: center;
-    text-align: center;
-    width: 100%;
-    max-width: 320px;
 }
 
 .horarios h3 {
