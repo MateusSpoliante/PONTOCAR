@@ -19,7 +19,7 @@
                 <a href="#servicos" class="mn">SERVIÇOS</a>
                 <a href="#local" class="mn">LOCALIZAÇÃO</a>
                 <a href="#contatos" class="mn">CONTATOS</a>
-                <a href="#agenda" id="btAgenda" z>Agendar Serviço</a>
+                <a href="#" id="btSobreNos" class="btn-abrir" onclick="abrirPopup()">Sobre Nós</a>
             </nav>
         </div>
     </header>
@@ -30,8 +30,40 @@
     <section id="local"></section>
     <section id="contatos"></section>
 
+    <div id="sobre-nos">
+        <header>
+            <nav id="menu">
+                <a id="btSobreNos">Sobre Nós</a>
+            </nav>
+        </header>
+
+        <!-- Popup Sobre Nós -->
+        <div id="popupSobreNos" class="popup-overlay">
+            <div class="popup-content">
+                <span class="fechar" id="btnFechar">&times;</span>
+                <h2>Sobre Nós</h2>
+                <p class="texto-sobre">
+                    A <strong>PontoCar</strong> é uma oficina mecânica localizada em Maringá, especializada em serviços
+                    automotivos com qualidade, transparência e comprometimento. Com uma equipe experiente e apaixonada
+                    por carros, nossa missão é garantir o melhor desempenho e segurança para o seu veículo.
+                    <br>Atuamos com foco em atendimento personalizado, prezando pela confiança e satisfação de cada
+                    cliente. Cada carro é tratado com atenção e cuidado, como se fosse nosso.
+                    <br>Oferecemos uma ampla gama de serviços: <strong>Mecânica Geral</strong>, <strong>Injeção
+                        Eletrônica</strong>, <strong>Troca de Óleo</strong>, <strong>Baterias</strong>,
+                    <strong>Freios</strong>, <strong>Alinhamento</strong> e <strong>Balanceamento</strong>. Seja para
+                    manutenção preventiva ou corretiva, estamos preparados para atender com qualidade, pontualidade e
+                    preço justo.
+                    <br><br><em>Venha nos conhecer e descubra por que a PontoCar é referência em Maringá!</em>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
     <script src="scripts/iniciarTrocaTexto.js"></script>
     <script src="scripts/carregarSecao.js"></script>
+    <script src="scripts/popup.js" defer></script>
 
 </body>
 
