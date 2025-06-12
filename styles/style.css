@@ -655,6 +655,8 @@ header {
     .banner-botoes {
         flex-direction: column;
         gap: 15px;
+        align-items: center;
+        justify-content: center;
     }
 
     .btn {
@@ -766,6 +768,18 @@ header {
 }
 
 @media (max-width: 400px) {
+
+    .banner {
+        justify-content: center;
+        align-items: center;
+        max-width: 100vh;
+    }
+
+    .banner-botoes {
+        justify-content: center;
+        align-items: center;
+    }
+
     #servicos {
         padding: 40px 10px;
     }
