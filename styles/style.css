@@ -461,11 +461,15 @@ header {
     font-size: 1rem;
 }
 
-.contato-item-telefone {
+.contato-item,
+.contato-item-telefone,
+.contato-item-gmail {
     transition: background-color 0.5s ease, transform 0.3s ease;
 }
 
-.contato-item-telefone:hover {
+.contato-item:hover,
+.contato-item-telefone:hover,
+.contato-item-gmail:hover {
     transform: scale(1.05);
     background-color: #1eff1e;
 }
@@ -478,7 +482,9 @@ header {
     border-radius: 5px;
 }
 
-.telefone {
+.telefone,
+.whatsapp,
+.gmail {
     text-decoration: none;
 }
 
@@ -898,8 +904,7 @@ header {
     }
 
     .contato-item img,
-    .contato-item-gmail img
-    .contato-item-telefone img {
+    .contato-item-gmail img .contato-item-telefone img {
         width: 24px;
         height: 24px;
     }
