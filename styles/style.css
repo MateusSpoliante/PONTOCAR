@@ -462,13 +462,11 @@ header {
 }
 
 .contato-item-telefone {
-    transition: background-color 0.5s ease, transform 0.5s ease;
-    border-left: solid #008900 4px;
-    border-right: solid #008900 4px;
+    transition: background-color 0.5s ease, transform 0.3 s ease;
 }
 
 .contato-item-telefone:hover {
-    transform: scale(1.04);
+    transform: scale(1.05);
     background-color: #1eff1e;
 }
 
@@ -482,11 +480,6 @@ header {
 
 .telefone {
     text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-.telefone:hover {
-    transform: scale(1.05);
 }
 
 .horarios {
@@ -765,7 +758,8 @@ header {
     }
 
     .contato-item,
-    .contato-item-gmail {
+    .contato-item-gmail,
+    .contato-item-telefone {
         flex-direction: column;
         text-align: center;
         gap: 5px;
@@ -774,7 +768,8 @@ header {
     }
 
     .contato-item img,
-    .contato-item-gmail img {
+    .contato-item-gmail img,
+    .contato-item-telefone img {
         width: 28px;
         height: 28px;
         margin-bottom: 5px;
@@ -896,13 +891,15 @@ header {
     }
 
     .contato-item,
-    .contato-item-gmail {
+    .contato-item-gmail,
+    .contato-item-telefone {
         font-size: clamp(0.75rem, 3.5vw, 0.8rem);
         padding: 10px 12px;
     }
 
     .contato-item img,
-    .contato-item-gmail img {
+    .contato-item-gmail img
+    .contato-item-telefone img {
         width: 24px;
         height: 24px;
     }
